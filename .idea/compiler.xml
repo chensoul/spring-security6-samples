@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="security-ch5-method-ex7" />
+        <module name="security-ch5-method-ex8" />
+        <module name="security-ch5-method-ex5" />
+        <module name="security-ch5-method-ex6" />
+        <module name="security-ch5-method-ex9" />
+        <module name="ssia-ch15-ex3-rs" />
+        <module name="security-ch3-form-ex1" />
+        <module name="security-ch3-form-ex2" />
+        <module name="security-ch3-form-ex3" />
+        <module name="security-ch3-form-ex4" />
+        <module name="security-ch3-form-ex5" />
+        <module name="security-ch3-form-ex6" />
+        <module name="ssia-ch15-ex3-as" />
+        <module name="security-ch4-authentication-ex5" />
+        <module name="ssia-ch14-ex2-as" />
+        <module name="security-ch4-authentication-ex6" />
+        <module name="ssia-ch18-ex1" />
+        <module name="ssia-ch18-ex2" />
+        <module name="security-ch1-basic-ex2" />
+        <module name="security-ch1-basic-ex3" />
+        <module name="security-ch1-basic-ex1" />
+        <module name="security-ch4-authentication-ex1" />
+        <module name="security-ch4-authentication-ex2" />
+        <module name="security-ch1-basic-ex4" />
+        <module name="security-ch4-authentication-ex3" />
+        <module name="ssia-ch15-ex4-rs" />
+        <module name="security-ch4-authentication-ex4" />
+        <module name="ssia-ch14-ex2-rs" />
+        <module name="security-ch5-method-ex10" />
+        <module name="security-ch5-method-ex11" />
+        <module name="security-ch5-method-ex3" />
+        <module name="security-ch5-method-ex4" />
+        <module name="security-ch5-method-ex1" />
+        <module name="security-ch5-method-ex2" />
+        <module name="ssia-ch14-ex1-rs-migration" />
+        <module name="ssia-ch15-ex4-as" />
+        <module name="security-ch6-reactive-ex2" />
+        <module name="ssia-ch15-ex1-as" />
+        <module name="security-ch6-reactive-ex3" />
+        <module name="security-ch6-reactive-ex4" />
+        <module name="security-ch6-reactive-ex5" />
+        <module name="security-ch6-reactive-ex1" />
+        <module name="ssia-ch11-ex1-s1" />
+        <module name="security-ch6-reactive-ex6" />
+        <module name="ssia-ch11-ex1-s2" />
+        <module name="ssia-ch15-ex1-rs" />
+        <module name="ssia-ch15-ex2-rs-migration" />
+        <module name="ssia-ch14-ex1-as" />
+        <module name="ssia-ch13-ex4" />
+        <module name="security-ch2-userdetails-ex1" />
+        <module name="security-ch2-userdetails-ex2" />
+        <module name="security-ch2-userdetails-ex3" />
+        <module name="security-ch2-userdetails-ex4" />
+        <module name="security-ch2-userdetails-ex5" />
+        <module name="ssia-ch12-ex3" />
+        <module name="ssia-ch12-ex1" />
+        <module name="ssia-ch12-ex2" />
+        <module name="ssia-ch14-ex1-rs" />
+        <module name="ssia-ch15-ex1-rs-migration" />
+        <module name="ssia-ch15-ex2-rs" />
+        <module name="ssia-ch13-ex1" />
+        <module name="ssia-ch13-ex2" />
+        <module name="ssia-ch15-ex2-as" />
+        <module name="ssia-ch13-ex3" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="security-ch1-ex1-default" target="21" />
+      <module name="security-ch1-ex6" target="11" />
+      <module name="security-ch2-ex3" target="11" />
+      <module name="security-ch2-ex4" target="11" />
+      <module name="security-ch2-ex5" target="11" />
+      <module name="security-ch4-ex2" target="11" />
+      <module name="security-ch4-ex3" target="11" />
+      <module name="security-ch4-ex4" target="11" />
+      <module name="security-ch5-ex1" target="11" />
+      <module name="security-ch5-ex2" target="11" />
+      <module name="security-ch5-ex3" target="11" />
+      <module name="security-ch5-ex4" target="11" />
+      <module name="security-ch5-ex5" target="11" />
+      <module name="security-ch5-ex6" target="11" />
+      <module name="security-ch5-ex7" target="11" />
+      <module name="security-ch6-ex1" target="11" />
+      <module name="security-ch6-ex2" target="11" />
+      <module name="security-ch6-ex3" target="11" />
+      <module name="security-ch6-ex4" target="11" />
+      <module name="ssia-ch9-ex2" target="11" />
+      <module name="ssia-ch9-ex3" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="security-ch1-basic-ex1" options="-parameters" />
+      <module name="security-ch1-basic-ex2" options="-parameters" />
+      <module name="security-ch1-basic-ex3" options="-parameters" />
+      <module name="security-ch1-basic-ex4" options="-parameters" />
+      <module name="security-ch1-ex1-default" options="-parameters" />
+      <module name="security-ch1-ex6" options="-parameters" />
+      <module name="security-ch2-ex3" options="-parameters" />
+      <module name="security-ch2-ex4" options="-parameters" />
+      <module name="security-ch2-ex5" options="-parameters" />
+      <module name="security-ch2-userdetails-ex1" options="-parameters" />
+      <module name="security-ch2-userdetails-ex2" options="-parameters" />
+      <module name="security-ch2-userdetails-ex3" options="-parameters" />
+      <module name="security-ch2-userdetails-ex4" options="-parameters" />
+      <module name="security-ch2-userdetails-ex5" options="-parameters" />
+      <module name="security-ch3-form-ex1" options="-parameters" />
+      <module name="security-ch3-form-ex2" options="-parameters" />
+      <module name="security-ch3-form-ex3" options="-parameters" />
+      <module name="security-ch3-form-ex4" options="-parameters" />
+      <module name="security-ch3-form-ex5" options="-parameters" />
+      <module name="security-ch3-form-ex6" options="-parameters" />
+      <module name="security-ch4-authentication-ex1" options="-parameters" />
+      <module name="security-ch4-authentication-ex2" options="-parameters" />
+      <module name="security-ch4-authentication-ex3" options="-parameters" />
+      <module name="security-ch4-authentication-ex4" options="-parameters" />
+      <module name="security-ch4-authentication-ex5" options="-parameters" />
+      <module name="security-ch4-authentication-ex6" options="-parameters" />
+      <module name="security-ch4-ex2" options="-parameters" />
+      <module name="security-ch4-ex3" options="-parameters" />
+      <module name="security-ch4-ex4" options="-parameters" />
+      <module name="security-ch5-ex1" options="-parameters" />
+      <module name="security-ch5-ex2" options="-parameters" />
+      <module name="security-ch5-ex3" options="-parameters" />
+      <module name="security-ch5-ex4" options="-parameters" />
+      <module name="security-ch5-ex5" options="-parameters" />
+      <module name="security-ch5-ex6" options="-parameters" />
+      <module name="security-ch5-ex7" options="-parameters" />
+      <module name="security-ch5-method-ex1" options="-parameters" />
+      <module name="security-ch5-method-ex10" options="-parameters" />
+      <module name="security-ch5-method-ex11" options="-parameters" />
+      <module name="security-ch5-method-ex2" options="-parameters" />
+      <module name="security-ch5-method-ex3" options="-parameters" />
+      <module name="security-ch5-method-ex4" options="-parameters" />
+      <module name="security-ch5-method-ex5" options="-parameters" />
+      <module name="security-ch5-method-ex6" options="-parameters" />
+      <module name="security-ch5-method-ex7" options="-parameters" />
+      <module name="security-ch5-method-ex8" options="-parameters" />
+      <module name="security-ch5-method-ex9" options="-parameters" />
+      <module name="security-ch6-ex1" options="-parameters" />
+      <module name="security-ch6-ex2" options="-parameters" />
+      <module name="security-ch6-ex3" options="-parameters" />
+      <module name="security-ch6-ex4" options="-parameters" />
+      <module name="security-ch6-reactive-ex1" options="-parameters" />
+      <module name="security-ch6-reactive-ex2" options="-parameters" />
+      <module name="security-ch6-reactive-ex3" options="-parameters" />
+      <module name="security-ch6-reactive-ex4" options="-parameters" />
+      <module name="security-ch6-reactive-ex5" options="-parameters" />
+      <module name="security-ch6-reactive-ex6" options="-parameters" />
+      <module name="ssia-ch11-ex1-s1" options="-parameters" />
+      <module name="ssia-ch11-ex1-s2" options="-parameters" />
+      <module name="ssia-ch12-ex1" options="-parameters" />
+      <module name="ssia-ch12-ex2" options="-parameters" />
+      <module name="ssia-ch12-ex3" options="-parameters" />
+      <module name="ssia-ch13-ex1" options="-parameters" />
+      <module name="ssia-ch13-ex2" options="-parameters" />
+      <module name="ssia-ch13-ex3" options="-parameters" />
+      <module name="ssia-ch13-ex4" options="-parameters" />
+      <module name="ssia-ch14-ex1-as" options="-parameters" />
+      <module name="ssia-ch14-ex1-rs" options="-parameters" />
+      <module name="ssia-ch14-ex1-rs-migration" options="-parameters" />
+      <module name="ssia-ch14-ex2-as" options="-parameters" />
+      <module name="ssia-ch14-ex2-rs" options="-parameters" />
+      <module name="ssia-ch15-ex1-as" options="-parameters" />
+      <module name="ssia-ch15-ex1-rs" options="-parameters" />
+      <module name="ssia-ch15-ex1-rs-migration" options="-parameters" />
+      <module name="ssia-ch15-ex2-as" options="-parameters" />
+      <module name="ssia-ch15-ex2-rs" options="-parameters" />
+      <module name="ssia-ch15-ex2-rs-migration" options="-parameters" />
+      <module name="ssia-ch15-ex3-as" options="-parameters" />
+      <module name="ssia-ch15-ex3-rs" options="-parameters" />
+      <module name="ssia-ch15-ex4-as" options="-parameters" />
+      <module name="ssia-ch15-ex4-rs" options="-parameters" />
+      <module name="ssia-ch18-ex1" options="-parameters" />
+      <module name="ssia-ch18-ex2" options="-parameters" />
+      <module name="ssia-ch9-ex2" options="-parameters" />
+      <module name="ssia-ch9-ex3" options="-parameters" />
+    </option>
+  </component>
+</project>

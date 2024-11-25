@@ -1,0 +1,919 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2f374098-5e0e-401f-b6e9-d39f60d4c307" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="alwaysUpdateSnapshots" value="true" />
+        <option name="localRepository" value="$MAVEN_REPOSITORY$" />
+        <option name="userSettingsFile" value="$USER_HOME$/.m2/settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2pKa0UMu6YeJegtln1V03NfEnAd" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="openDirectoriesWithSingleClick" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Debug",
+    "JUnit.MainTests (1).executor": "Debug",
+    "JUnit.MainTests (2).executor": "Debug",
+    "JUnit.MainTests (3).executor": "Debug",
+    "JUnit.MainTests (4).executor": "Debug",
+    "JUnit.MainTests.executor": "Debug",
+    "Maven.security-ch2-ex3 [clean].executor": "Run",
+    "Maven.security-ch2-ex3 [compile].executor": "Run",
+    "Maven.security-ch3-form-ex1 [clean].executor": "Run",
+    "Maven.security-ch3-form-ex1 [compile].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.Main (1).executor": "Debug",
+    "Spring Boot.Main (46).executor": "Debug",
+    "Spring Boot.Main (47).executor": "Debug",
+    "Spring Boot.Main (48).executor": "Debug",
+    "Spring Boot.Main.executor": "Debug",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/chensoul/Downloads/spring_security_in_action_source_code",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "MavenSettings"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/security-ch3-form-ex3/src/main/java/com/chensoul/security" />
+      <recent name="$PROJECT_DIR$/security-ch3-form-ex3/src/main/resources" />
+      <recent name="$PROJECT_DIR$/security-ch3-form-ex2/src/main/resources/templates" />
+      <recent name="$PROJECT_DIR$/security-ch3-form-ex1/src/main/resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.chensoul.security.controller" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.MainTests (3)">
+    <configuration name="MainTests (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="security-ch1-basic-ex3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chensoul.security.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.chensoul.security" />
+      <option name="MAIN_CLASS_NAME" value="com.chensoul.security.MainTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainTests (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="security-ch1-basic-ex4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chensoul.security.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.chensoul.security" />
+      <option name="MAIN_CLASS_NAME" value="com.chensoul.security.MainTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainTests (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="security-ch2-userdetails-ex1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chensoul.security.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.chensoul.security" />
+      <option name="MAIN_CLASS_NAME" value="com.chensoul.security.MainTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainTests (4)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="security-ch1-basic-ex1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chensoul.security.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.chensoul.security" />
+      <option name="MAIN_CLASS_NAME" value="com.chensoul.security.MainTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="security-ch1-basic-ex2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chensoul.security.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.chensoul.security" />
+      <option name="MAIN_CLASS_NAME" value="com.chensoul.security.MainTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (100)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch6-reactive-ex5" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (101)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch6-reactive-ex6" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (102)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch5-method-ex10" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.security.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (103)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch5-method-ex11" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.security.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (104)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ssia-ch18-ex1" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.security.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (105)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ssia-ch18-ex2" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.security.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (10)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch2-ex4" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.laurentiuspilca.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (11)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch4-authentication-ex2" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.laurentiuspilca.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (12)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch4-authentication-ex3" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.laurentiuspilca.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (13)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch4-authentication-ex4" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.laurentiuspilca.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (14)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch4-authentication-ex5" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.laurentiuspilca.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (15)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch2-ex5" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.laurentiuspilca.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (16)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch4-ex4" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.laurentiuspilca.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (17)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch4-ex3" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.laurentiuspilca.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (18)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch4-ex2" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.laurentiuspilca.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (19)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch4-authentication-ex6" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.laurentiuspilca.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch2-ex3" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.laurentiuspilca.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (20)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch4-authentication-ex1" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.laurentiuspilca.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (21)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ssia-ch9-ex2" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.laurentiuspilca.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (22)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ssia-ch9-ex3" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.laurentiuspilca.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (23)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch5-ex5" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.laurentiuspilca.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (24)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch5-ex6" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.laurentiuspilca.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (25)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch5-ex7" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.laurentiuspilca.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (26)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch5-ex1" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.laurentiuspilca.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (27)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch1-basic-ex1" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.security.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (28)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch1-basic-ex2" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.security.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (29)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch1-basic-ex3" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.security.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (2)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch1-basic-ex1" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.laurentiuspilca.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (30)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch1-basic-ex4" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.security.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (31)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch2-userdetails-ex1" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.security.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (32)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch1-basic-ex4" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.security.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (33)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch1-basic-ex4" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.security.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (34)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch1-basic-ex4" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.security.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (35)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch2-userdetails-ex2" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.security.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (36)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch2-userdetails-ex3" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.security.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (37)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch2-userdetails-ex4" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.security.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (38)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch2-userdetails-ex5" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.security.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (39)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch3-form-ex1" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.security.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (3)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch1-basic-ex2" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.laurentiuspilca.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (40)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch3-form-ex2" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.security.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (41)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch3-form-ex3" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.security.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (42)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch3-form-ex4" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.security.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (43)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch3-form-ex5" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.security.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (44)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch1-basic-ex4" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.security.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (45)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch3-form-ex6" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.security.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (46)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch3-form-ex1" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.security.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (47)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch3-form-ex2" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.security.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (48)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch3-form-ex3" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.security.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (49)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch3-form-ex5" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.security.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (4)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch1-basic-ex3" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.laurentiuspilca.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (50)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch4-authentication-ex1" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.security.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (51)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ssia-ch11-ex1-s2" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (52)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ssia-ch12-ex1" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (53)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ssia-ch12-ex2" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (54)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ssia-ch11-ex1-s1" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (55)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch4-authentication-ex2" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.security.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (56)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch2-userdetails-ex1" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.security.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (57)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch2-userdetails-ex2" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.security.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (58)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch2-userdetails-ex3" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.security.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (59)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch2-userdetails-ex4" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.security.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (5)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch1-basic-ex4" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.laurentiuspilca.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (60)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch2-userdetails-ex5" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.security.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (61)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch3-form-ex6" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.security.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (62)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch3-form-ex4" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.security.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (63)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch4-authentication-ex3" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.security.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (64)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch4-authentication-ex4" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.security.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (65)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch4-authentication-ex5" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.security.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (66)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch4-authentication-ex6" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.security.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (67)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ssia-ch12-ex3" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (68)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ssia-ch13-ex1" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (69)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ssia-ch13-ex2" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (6)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch1-ex6" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.laurentiuspilca.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (70)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ssia-ch13-ex3" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (71)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ssia-ch13-ex4" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (72)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ssia-ch14-ex1-as" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (73)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ssia-ch15-ex1-as" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (74)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ssia-ch15-ex1-rs" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (75)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ssia-ch15-ex1-rs-migration" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (76)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ssia-ch15-ex2-as" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (77)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ssia-ch15-ex2-rs" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (78)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ssia-ch14-ex1-rs" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (79)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ssia-ch14-ex1-rs-migration" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (7)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch1-basic-ex4" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.laurentiuspilca.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (80)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ssia-ch14-ex2-as" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (81)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ssia-ch14-ex2-rs" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (82)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ssia-ch15-ex2-rs-migration" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (83)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ssia-ch15-ex3-as" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (84)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ssia-ch15-ex3-rs" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (85)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ssia-ch15-ex4-as" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (86)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ssia-ch15-ex4-rs" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (87)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch5-method-ex1" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (88)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch5-method-ex2" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (89)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch5-method-ex3" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (8)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch2-userdetails-ex1" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.laurentiuspilca.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (90)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch5-method-ex4" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (91)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch5-method-ex5" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (92)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch5-method-ex6" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (93)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch5-method-ex7" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (94)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch5-method-ex8" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (95)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch5-method-ex9" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (96)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch6-reactive-ex2" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (97)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch6-reactive-ex3" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (98)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch6-reactive-ex1" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (99)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch6-reactive-ex4" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chensoul.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (9)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch2-userdetails-ex2" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.laurentiuspilca.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="security-ch1-basic-ex1" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.laurentiuspilca.ssia.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.MainTests (3)" />
+        <item itemvalue="JUnit.MainTests (2)" />
+        <item itemvalue="JUnit.MainTests (1)" />
+        <item itemvalue="JUnit.MainTests" />
+        <item itemvalue="JUnit.MainTests (4)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23726.103" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+</project>
