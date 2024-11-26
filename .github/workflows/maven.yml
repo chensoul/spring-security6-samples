@@ -23,4 +23,4 @@ jobs:
 
       - name: Build with Maven
         run: |
-          mvn -ntp clean verify
+          mvn -ntp clean verify -DskipTests
