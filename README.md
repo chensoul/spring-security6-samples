@@ -53,7 +53,7 @@ OAuth2 Token 有两种格式：
 
 ## 其他
 
-## 生成 HTTPS 证书
+### 生成 HTTPS 证书
 
 生成字签名证书：
 
@@ -70,7 +70,7 @@ openssl pkcs12 -export -in cert.pem -inkey key.pem -out certificate.p12
 ```properties
 server.ssl.key-store-type=PKCS12
 server.ssl.key-store=classpath:certificate.p12
-server.ssl.key-store-password=12345
+server.ssl.key-store-password=123456
 ```
 
 ### 生成 Jwt 证书
