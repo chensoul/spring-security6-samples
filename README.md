@@ -14,56 +14,6 @@
 
 基于 Maven 构建的 Spring Security 5 示例。
 
-## 模块
-
-- sec-ch1-basic-ex1
-- sec-ch1-basic-ex2
-    - UserDetailsService、PasswordEncoder
-- sec-ch1-basic-ex3
-    - AuthenticationManagerBuilder、InMemoryUserDetailsManager
-- sec-ch1-basic-ex4
-    - UserManagementConfig、SecurityConfig
-- sec-ch2-user-ex1
-    - InMemoryUserDetailsService
-- sec-ch2-user-ex2
-    - JdbcUserDetailsManager
-- sec-ch2-user-ex3
-    - JpaUserDetailsService
-- sec-ch2-user-ex4
-    - ldapAuthentication
-- sec-ch2-user-ex5
-    - LdapAuthenticationProvider
-- sec-ch3-form-ex1
-    - formLogin
-- sec-ch3-form-ex2
-    - formLogin
-- sec-ch3-form-ex3
-    - csrf
-- sec-ch3-form-ex4
-    - cors
-- sec-ch3-form-ex5
-    - rememberMe
-- sec-ch3-form-ex6
-    - session
-- sec-ch4-authentication-ex1
-    - AuthenticationLoggingFilter、RequestValidationFilter
-- sec-ch4-authentication-ex2
-    - CustomAuthenticationProvider
-- sec-ch4-authentication-ex3
-    - MessageSource
-- sec-ch4-authentication-ex4
-    - DaoAuthenticationProvider、DifferentLocationChecker、RedisUserCache
-- sec-ch4-authentication-ex5
-    - CustomAuthenticationEntryPoint
-- sec-ch4-authentication-ex6
-    - CustomAuthenticationSuccessHandler、CustomAuthenticationFailureHandler
-- sec-ch4-authentication-ex7
-    - RestAuthenticationProvider、JwtAuthenticationProvider、RefreshTokenAuthenticationProvider
-- sec-ch4-authentication-ex9
-    - SecurityContextHolderStrategy
-- sec-ch5-method-ex1
-- sec-ch6-reactive-ex1
-
 ## 说明
 
 1. PasswordEncoder 通常和 UserDetailsService 一起配置，配置 UserDetailsService 时，需要指定 PasswordEncoder。
@@ -71,17 +21,18 @@
    之后已删除，参考[文档](https://spring.io/blog/2022/02/21/spring-security-without-the-websecurityconfigureradapter)
    ），二是使用
    @Bean 注解装配 Bean。不建议混合使用两种方式，推荐使用第二种方式。
-3. CSRF 
-4. OAuth2 Token 有两种格式：Opaque，不透明。不存储数据的令牌。要实现授权，资源服务器通常需要调用授权服务器，提供不透明的令牌，并获取详细信息。No Opaque，非不透明，存储数据的令牌，使后端能够立即实现授权。JWT 是最常用的非不透明令牌实现。
+3. CSRF
+4. OAuth2 Token 有两种格式：Opaque，不透明。不存储数据的令牌。要实现授权，资源服务器通常需要调用授权服务器，提供不透明的令牌，并获取详细信息。No
+   Opaque，非不透明，存储数据的令牌，使后端能够立即实现授权。JWT 是最常用的非不透明令牌实现。
 5. OAuth2 漏洞：
-   - CSRF
-   - Stealing client credentials
-   - 重放令牌
-   - 令牌劫持，参考[文档](https://blog.intothesymmetry.com/2015/06/on-oauth-token-hijacks-for-fun-and.html)
+    - CSRF
+    - Stealing client credentials
+    - 重放令牌
+    - 令牌劫持，参考[文档](https://blog.intothesymmetry.com/2015/06/on-oauth-token-hijacks-for-fun-and.html)
 6. Spring Security 测试
-   - @WithMockUser
-   - @WithUserDetails
-   - 自定义注解 @WithCustomUser：使用 @WithSecurityContext
+    - @WithMockUser
+    - @WithUserDetails
+    - 自定义注解 @WithCustomUser：使用 @WithSecurityContext
 
 ## TODO
 
@@ -140,7 +91,8 @@ openssl pkcs12 -in private.p12 -nodes -nocerts -out private.key
 
 ## 参考
 
-- 《Spring Security in Action, 2nd Edition》 [code](https://manning-content.s3.amazonaws.com/download/9/cdd7a3a-1962-44d0-b637-59a805d0e18c/spring_security_in_action_source_code.zip)
+- 《Spring Security in Action, 2nd
+  Edition》 [code](https://manning-content.s3.amazonaws.com/download/9/cdd7a3a-1962-44d0-b637-59a805d0e18c/spring_security_in_action_source_code.zip)
 - https://github.com/spring-attic/spring-security-oauth2-boot/tree/main/samples
 - https://github.com/chensoul/spring-security-oauth2-boot-examples
 - https://github.com/eugenp/learn-spring-security/tree/lsso-module5/logout-with-oauth-and-oidc-end
