@@ -16,6 +16,16 @@
 
 ## 说明
 
+## 流程图
+
+Spring Security 流程图
+
+![spring-security-flow](./doc/spring-security-flow.png)
+
+Spring MVC 流程图
+
+![spring-mvc-flow](./doc/spring-mvc-flow.png)
+
 ### PasswordEncoder 和 UserDetailsService
 
 PasswordEncoder 通常和 UserDetailsService 一起配置，配置 UserDetailsService 时，需要指定 PasswordEncoder。
@@ -125,13 +135,3 @@ openssl pkcs12 -in private.p12 -nodes -nocerts -out private.key
 - [Spring Security 6.0 Tutorials in Hindi](https://github.com/becoderpavy/spring_boot_tutorial.git)
 - https://github.com/docodebyself/JWT-Authentication-and-Authorization-in-Spring-Security---Spring-Boot-REST-API
 - [Exploring Spring Security's Compromised Password Checker](https://dimitri.codes/spring-security-compromisedpasswordchecker/)
-
-## 贡献
-
-非常欢迎[提出请求](https://help.github.com/articles/creating-a-pull-request) 。
-
-## 许可
-
-[Apache 2.0 许可](https://www.apache.org/licenses/LICENSE-2.0.html) 。
-
-
