@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.chensoul</groupId>
+    <artifactId>spring-security-5-samples</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>sec-ch1-basic-ex1</module>
+        <module>sec-ch1-basic-ex2</module>
+        <module>sec-ch1-basic-ex3</module>
+        <module>sec-ch1-basic-ex4</module>
+        <module>sec-ch2-user-ex1</module>
+        <module>sec-ch2-user-ex2</module>
+        <module>sec-ch2-user-ex3</module>
+        <module>sec-ch2-user-ex4</module>
+        <module>sec-ch2-user-ex5</module>
+        <module>sec-ch3-form-ex1</module>
+        <module>sec-ch3-form-ex2</module>
+        <module>sec-ch3-form-ex3</module>
+        <module>sec-ch3-form-ex4</module>
+        <module>sec-ch3-form-ex5</module>
+        <module>sec-ch3-form-ex6</module>
+        <module>sec-ch4-authentication-ex1</module>
+        <module>sec-ch4-authentication-ex2</module>
+        <module>sec-ch4-authentication-ex4</module>
+        <module>sec-ch4-authentication-ex5</module>
+        <module>sec-ch4-authentication-ex6</module>
+        <module>sec-ch4-authentication-ex7</module>
+        <module>sec-ch4-authentication-ex3</module>
+        <module>sec-ch4-authentication-ex9</module>
+        <module>sec-ch5-method-ex1</module>
+        <module>sec-ch5-method-ex2</module>
+        <module>sec-ch5-method-ex3</module>
+        <module>sec-ch5-method-ex4</module>
+        <module>sec-ch5-method-ex5</module>
+        <module>sec-ch5-method-ex6</module>
+        <module>sec-ch6-reactive-ex1</module>
+        <module>sec-ch6-reactive-ex2</module>
+        <module>sec-ch6-reactive-ex3</module>
+        <module>sec-ch6-reactive-ex4</module>
+        <module>sec-ch6-reactive-ex5</module>
+        <module>sec-ch6-reactive-ex6</module>
+
+        <module>seco-ch1-oauth2client-ex1</module>
+        <module>seco-ch1-oauth2client-ex2</module>
+        <module>seco-ch2-authserver-ex1</module>
+        <module>seco-ch2-authserver-ex2</module>
+        <module>seco-ch2-authserver-ex3</module>
+        <module>seco-ch2-authserver-ex4</module>
+        <module>seco-ch3-ex1-tokeninfo-as</module>
+        <module>seco-ch3-ex1-tokeninfo-rs</module>
+        <module>seco-ch3-ex1-tokeninfo-rs-migration</module>
+        <module>seco-ch3-ex2-jdbctoken-as</module>
+        <module>seco-ch3-ex2-jdbctoken-rs</module>
+        <module>seco-ch3-ex3-jwtkey-as</module>
+        <module>seco-ch3-ex3-jwtkey-rs</module>
+        <module>seco-ch3-ex3-jwtkey-rs-migration</module>
+        <module>seco-ch3-ex4-jks-as</module>
+        <module>seco-ch3-ex4-jks-rs</module>
+        <module>seco-ch3-ex4-jks-rs-migration</module>
+        <module>seco-ch3-ex5-jwks-as</module>
+        <module>seco-ch3-ex5-jwks-rs</module>
+        <module>seco-ch3-ex6-enhancer-as</module>
+        <module>seco-ch3-ex6-enhancer-rs</module>
+        <module>seco-ch4-keycloak-ex1</module>
+        <module>seco-ch4-keycloak-ex2</module>
+    </modules>
+
+</project>
