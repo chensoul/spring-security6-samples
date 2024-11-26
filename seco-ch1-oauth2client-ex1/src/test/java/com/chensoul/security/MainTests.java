@@ -1,6 +1,6 @@
 package com.chensoul.security;
 
-import com.chensoul.security.config.MockCustomUser;
+import com.chensoul.security.config.WithCustomUser;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +18,7 @@ public class MainTests {
     private MockMvc mvc;
 
     @Test
-    @MockCustomUser
+    @WithCustomUser
     @DisplayName("Test successful call on main endpoint after OAuth 2 authentication")
     public void testSuccessfulCallOnMainEndpoint() throws Exception {
         mvc.perform(get("/"))

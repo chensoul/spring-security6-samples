@@ -12,25 +12,25 @@
         <module>sec-ch1-basic-ex2</module>
         <module>sec-ch1-basic-ex3</module>
         <module>sec-ch1-basic-ex4</module>
-        <module>sec-ch2-user-ex1</module>
-        <module>sec-ch2-user-ex2</module>
-        <module>sec-ch2-user-ex3</module>
-        <module>sec-ch2-user-ex4</module>
-        <module>sec-ch2-user-ex5</module>
-        <module>sec-ch3-form-ex1</module>
-        <module>sec-ch3-form-ex2</module>
-        <module>sec-ch3-form-ex3</module>
-        <module>sec-ch3-form-ex4</module>
-        <module>sec-ch3-form-ex5</module>
-        <module>sec-ch3-form-ex6</module>
-        <module>sec-ch4-authentication-ex1</module>
-        <module>sec-ch4-authentication-ex2</module>
-        <module>sec-ch4-authentication-ex4</module>
-        <module>sec-ch4-authentication-ex5</module>
-        <module>sec-ch4-authentication-ex6</module>
-        <module>sec-ch4-authentication-ex7</module>
-        <module>sec-ch4-authentication-ex3</module>
-        <module>sec-ch4-authentication-ex9</module>
+        <module>sec-ch2-user-ex1-inmemory</module>
+        <module>sec-ch2-user-ex2-jdbc</module>
+        <module>sec-ch2-user-ex3-jpa</module>
+        <module>sec-ch2-user-ex4-ldap</module>
+        <module>sec-ch2-user-ex5-ldap</module>
+        <module>sec-ch3-form-ex1-login</module>
+        <module>sec-ch3-form-ex2-login</module>
+        <module>sec-ch3-form-ex3-csrf</module>
+        <module>sec-ch3-form-ex4-cors</module>
+        <module>sec-ch3-form-ex5-rememberme</module>
+        <module>sec-ch3-form-ex6-session</module>
+        <module>sec-ch4-authentication-ex1-filter</module>
+        <module>sec-ch4-authentication-ex2-provider</module>
+        <module>sec-ch4-authentication-ex4-provider</module>
+        <module>sec-ch4-authentication-ex5-entrypoint</module>
+        <module>sec-ch4-authentication-ex6-handler</module>
+        <module>sec-ch4-authentication-ex7-rest-jwt</module>
+        <module>sec-ch4-authentication-ex3-i18n</module>
+        <module>sec-ch4-authentication-ex9-async</module>
         <module>sec-ch5-method-ex1</module>
         <module>sec-ch5-method-ex2</module>
         <module>sec-ch5-method-ex3</module>
