@@ -106,26 +106,25 @@ openssl pkcs12 -in private.p12 -nodes -nocerts -out private.key
 
 - 《Spring Security in Action, 2nd
   Edition》 [code](https://manning-content.s3.amazonaws.com/download/9/cdd7a3a-1962-44d0-b637-59a805d0e18c/spring_security_in_action_source_code.zip)
-- https://github.com/spring-attic/spring-security-oauth2-boot/tree/main/samples
+- [spring-security-oauth2-boot 示例](https://github.com/spring-attic/spring-security-oauth2-boot/tree/main/samples)
 - https://github.com/chensoul/spring-security-oauth2-boot-examples
-- https://github.com/eugenp/learn-spring-security/tree/lsso-module5/logout-with-oauth-and-oidc-end
-- https://github.com/OpenDocCN/freelearn-javaweb-zh/blob/f12853ff9d621f45414c5f67af4c8d1d04484f1a/docs/ms-sprcld/ms-sprcld_12.md
-- https://coursehunters.online/t/learn-spring-security-oauth-the-master-class-part-1
-- https://coursehunters.online/t/learn-spring-security-oauth-the-master-class-part-2
-- https://coursehunters.online/t/learn-spring-security-oauth-the-master-class-part-3
-- https://coursehunters.online/t/learn-spring-security-oauth-the-master-class-part-4
-- https://coursehunters.online/t/learn-spring-security-oauth-the-certification-class-part-1
-- https://coursehunters.online/t/learn-spring-security-oauth-the-certification-class-part-2
-- https://coursehunters.online/t/learn-spring-security-oauth-the-certification-class-part-3
-- https://coursehunters.online/t/learn-spring-security-oauth-the-certification-class-part-4
-- https://github.com/spring-tips/auth0
-- https://github.com/spring-tips/webauthn-and-passkeys
-- https://github.com/spring-tips/spring-security-one-time-token
+- [Learn Spring Security](https://github.com/eugenp/learn-spring-security)
+- [Learn Spring Security OAuth: The Master Class - part 1](https://coursehunters.online/t/learn-spring-security-oauth-the-master-class-part-1)
+- [Learn Spring Security OAuth: The Master Class - part 2](https://coursehunters.online/t/learn-spring-security-oauth-the-master-class-part-2)
+- [Learn Spring Security OAuth: The Master Class - part 3](https://coursehunters.online/t/learn-spring-security-oauth-the-master-class-part-3)
+- [Learn Spring Security OAuth: The Master Class - part 4](https://coursehunters.online/t/learn-spring-security-oauth-the-master-class-part-4)
+- [Learn Spring Security OAuth: The Certification Class - Part 1](https://coursehunters.online/t/learn-spring-security-oauth-the-certification-class-part-1)
+- [Learn Spring Security OAuth: The Certification Class - Part 2](https://coursehunters.online/t/learn-spring-security-oauth-the-certification-class-part-2)
+- [Learn Spring Security OAuth: The Certification Class - Part 3](https://coursehunters.online/t/learn-spring-security-oauth-the-certification-class-part-3)
+- [Learn Spring Security OAuth: The Certification Class - Part 4](https://coursehunters.online/t/learn-spring-security-oauth-the-certification-class-part-4)
+- [spring-tips: auth0](https://github.com/spring-tips/auth0)
+- [spring-tips: webauthn-and-passkeys](https://github.com/spring-tips/webauthn-and-passkeys)
+- [spring-tips: spring-security-one-time-token](https://github.com/spring-tips/spring-security-one-time-token)
 - https://github.com/atquil/spring-security/
-- https://github.com/Kehrlann/spring-security-architecture-workshop
-- https://github.com/becoderpavy/spring_boot_tutorial.git
+- [Spring Security: The Good Parts workshop](https://github.com/Kehrlann/spring-security-architecture-workshop)
+- [Spring Security 6.0 Tutorials in Hindi](https://github.com/becoderpavy/spring_boot_tutorial.git)
 - https://github.com/docodebyself/JWT-Authentication-and-Authorization-in-Spring-Security---Spring-Boot-REST-API
-- https://dimitri.codes/spring-security-compromisedpasswordchecker/
+- [Exploring Spring Security's Compromised Password Checker](https://dimitri.codes/spring-security-compromisedpasswordchecker/)
 
 ## 贡献
 
@@ -133,10 +132,6 @@ openssl pkcs12 -in private.p12 -nodes -nocerts -out private.key
 
 ## 许可
 
-learn-spring-authorization-server 是在 [Apache 2.0 许可](https://www.apache.org/licenses/LICENSE-2.0.html)
-下发布的开源软件 。
-
- 
-
+[Apache 2.0 许可](https://www.apache.org/licenses/LICENSE-2.0.html) 。
 
 
