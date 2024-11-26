@@ -16,23 +16,36 @@
 
 ## 说明
 
-1. PasswordEncoder 通常和 UserDetailsService 一起配置，配置 UserDetailsService 时，需要指定 PasswordEncoder。
-2. 配置 Spring Security 有两种方式，一是继承 WebSecurityConfigurerAdapter 类（在 Spring Security 5.7.0-M2
+### PasswordEncoder 和 UserDetailsService
+
+PasswordEncoder 通常和 UserDetailsService 一起配置，配置 UserDetailsService 时，需要指定 PasswordEncoder。
+
+### 配置 HttpSecurity
+
+配置 Spring Security 有两种方式：
+- 继承 WebSecurityConfigurerAdapter 类（在 Spring Security 5.7.0-M2
    之后已删除，参考[文档](https://spring.io/blog/2022/02/21/spring-security-without-the-websecurityconfigureradapter)
-   ），二是使用
+   ）
+- 使用
    @Bean 注解装配 Bean。不建议混合使用两种方式，推荐使用第二种方式。
-3. CSRF
-4. OAuth2 Token 有两种格式：Opaque，不透明。不存储数据的令牌。要实现授权，资源服务器通常需要调用授权服务器，提供不透明的令牌，并获取详细信息。No
-   Opaque，非不透明，存储数据的令牌，使后端能够立即实现授权。JWT 是最常用的非不透明令牌实现。
-5. OAuth2 漏洞：
+
+### OAuth2
+
+OAuth2 Token 有两种格式：
+- Opaque，不透明。不存储数据的令牌。要实现授权，资源服务器通常需要调用授权服务器，提供不透明的令牌，并获取详细信息。
+- No Opaque，非不透明，存储数据的令牌，使后端能够立即实现授权。JWT 是最常用的非不透明令牌实现。
+
+- OAuth2 漏洞：
     - CSRF
     - Stealing client credentials
     - 重放令牌
     - 令牌劫持，参考[文档](https://blog.intothesymmetry.com/2015/06/on-oauth-token-hijacks-for-fun-and.html)
-6. Spring Security 测试
-    - @WithMockUser
-    - @WithUserDetails
-    - 自定义注解 @WithCustomUser：使用 @WithSecurityContext
+
+### Spring Security 测试
+ 
+1. @WithMockUser
+2. @WithUserDetails
+3. 自定义注解 @WithCustomUser：使用 @WithSecurityContext
 
 ## TODO
 
