@@ -5,6 +5,7 @@ import com.chensoul.security.service.JpaUserDetailsService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -22,9 +23,10 @@ public class SecurityConfig {
 
     @Bean
     protected SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http.formLogin().defaultSuccessUrl("/main", true);
-        http.authorizeRequests().anyRequest().authenticated();
-        http.authenticationProvider(new CustomAuthenticationProvider(jpaUserDetailsService, passwordEncoder()));
+        http.authorizeRequests(auth -> auth.anyRequest().authenticated())
+                .httpBasic(Customizer.withDefaults())
+                .formLogin(form -> form.defaultSuccessUrl("/main", true))
+                .authenticationProvider(new CustomAuthenticationProvider(jpaUserDetailsService, passwordEncoder()));
         return http.build();
     }
 }

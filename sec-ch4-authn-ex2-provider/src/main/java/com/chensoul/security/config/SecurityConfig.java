@@ -5,8 +5,7 @@ import javax.sql.DataSource;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.ProviderManager;
+import static org.springframework.security.config.Customizer.withDefaults;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
@@ -36,28 +35,21 @@ public class SecurityConfig {
     // 方式 1
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http.requiresChannel(rcc -> rcc.anyRequest().requiresInsecure()); // Only HTTP
-
-        http.httpBasic();
-        http.formLogin();
-
-        http.authorizeRequests().anyRequest().authenticated();
-
-        //这是增加一个
-        http.authenticationProvider(customUsernamePasswordAuthenticationProvider());
+        http.authorizeRequests(auth -> auth.anyRequest().authenticated())
+                .requiresChannel(rcc -> rcc.anyRequest().requiresInsecure()) // Only HTTP
+                .httpBasic(withDefaults())
+                .formLogin(withDefaults())
+                .authenticationProvider(customUsernamePasswordAuthenticationProvider()); //这是增加一个
         return http.build();
     }
 
 //    //方式 2
 //    @Bean
-//    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-//        http.requiresChannel(rcc -> rcc.anyRequest().requiresInsecure()); // Only HTTP
-//
-//        http.httpBasic();
-//        http.formLogin();
-//
-//        http.authorizeRequests().anyRequest().authenticated();
-//
+//    public SecurityFilterChain securityFilterChain1(HttpSecurity http) throws Exception {
+//        http.authorizeRequests(auth -> auth.anyRequest().authenticated())
+//                .requiresChannel(rcc -> rcc.anyRequest().requiresInsecure()) // Only HTTP
+//                .httpBasic(withDefaults())
+//                .formLogin(withDefaults());
 //        return http.build();
 //    }
 //

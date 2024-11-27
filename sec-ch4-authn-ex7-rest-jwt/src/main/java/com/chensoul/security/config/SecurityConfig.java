@@ -71,21 +71,18 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http.requiresChannel(rcc -> rcc.anyRequest().requiresInsecure()); // Only HTTP
-
-        http.formLogin();
-        http.httpBasic();
-
-        http.headers(headers -> headers.cacheControl(withDefaults()).frameOptions(withDefaults()).disable())
+        http.authorizeHttpRequests(authorize ->
+                        authorize
+                                .mvcMatchers(jwtProperties.getPathsToSkip().toArray(new String[0])).permitAll()
+                                .anyRequest().authenticated()
+                )
+                .requiresChannel(rcc -> rcc.anyRequest().requiresInsecure()) // Only HTTP
+                .formLogin(withDefaults())
+                .httpBasic(withDefaults())
+                .headers(headers -> headers.cacheControl(withDefaults()).frameOptions(withDefaults()).disable())
                 .csrf(AbstractHttpConfigurer::disable)
-                .sessionManagement(config -> config.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
-
-        http.authorizeHttpRequests(authorize -> authorize
-                .mvcMatchers(jwtProperties.getPathsToSkip().toArray(new String[0])).permitAll()
-                .anyRequest().authenticated()
-        );
-
-        http.exceptionHandling(config -> config.accessDeniedHandler(new RestAccessDeniedHandler(objectMapper))
+                .sessionManagement(config -> config.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .exceptionHandling(config -> config.accessDeniedHandler(new RestAccessDeniedHandler(objectMapper))
                         .authenticationEntryPoint(new RestAuthenticationEntryPoint(objectMapper)))
                 .addFilterBefore(restLoginProcessingFilter(authenticationManager()), UsernamePasswordAuthenticationFilter.class)
                 .addFilterBefore(jwtTokenAuthenticationProcessingFilter(authenticationManager()), UsernamePasswordAuthenticationFilter.class)

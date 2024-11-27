@@ -3,6 +3,7 @@ package com.chensoul.security.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
+import org.springframework.security.config.Customizer;
 import org.springframework.security.config.web.server.ServerHttpSecurity;
 import org.springframework.security.core.userdetails.MapReactiveUserDetailsService;
 import org.springframework.security.core.userdetails.ReactiveUserDetailsService;
@@ -33,12 +34,9 @@ public class SecurityConfig {
 
     @Bean
     public SecurityWebFilterChain securityWebFilterChain(ServerHttpSecurity http) {
-        return http.authorizeExchange()
-                .pathMatchers(HttpMethod.GET, "/hello").authenticated()
-                .anyExchange().permitAll()
-                .and()
-                .httpBasic()
-                .and()
-                .build();
+        http.authorizeExchange(auth -> auth.pathMatchers(HttpMethod.GET, "/hello").authenticated()
+                        .anyExchange().permitAll())
+                .httpBasic(Customizer.withDefaults());
+        return http.build();
     }
 }

@@ -1,10 +1,12 @@
 package com.chensoul.security.config;
 
+import java.util.Collections;
 import javax.sql.DataSource;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.web.servlet.ServletListenerRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.core.session.SessionRegistry;
 import org.springframework.security.core.session.SessionRegistryImpl;
@@ -18,6 +20,8 @@ import static org.springframework.security.web.authentication.rememberme.Abstrac
 import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
 import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
 import org.springframework.security.web.session.HttpSessionEventPublisher;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.CorsConfigurationSource;
 
 @RequiredArgsConstructor
 @Configuration
@@ -26,28 +30,35 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http.authorizeRequests(requests -> requests
-                .anyRequest().authenticated());
-        http.formLogin(form -> {
-            form.defaultSuccessUrl("/about")
-                    .loginPage("/login")
-                    .loginProcessingUrl("/doLogin").permitAll();
-        });
-        http.httpBasic();
-        http.csrf().disable();
-
-        http.rememberMe(rememberMe -> {
-            rememberMe.key(SPRING_SECURITY_REMEMBER_ME_COOKIE_KEY)
-                    .tokenValiditySeconds(TWO_WEEKS_S)
-                    .rememberMeParameter("remember") //default is remember-me
-                    .tokenRepository(persistentTokenRepository())
-            ;
-        });
-
-        http.sessionManagement(sessionManagement -> {
-            sessionManagement.maximumSessions(1).sessionRegistry(sessionRegistry()).and().sessionFixation().none();
-        });
-
+        http.authorizeRequests(auth -> auth.anyRequest().authenticated())
+                .httpBasic(Customizer.withDefaults())
+                .formLogin(form -> {
+                    form.defaultSuccessUrl("/about")
+                            .loginPage("/login")
+                            .loginProcessingUrl("/doLogin").permitAll();
+                })
+                .csrf(c -> c.disable())
+                .cors(c -> {
+                    CorsConfigurationSource source = request -> {
+                        CorsConfiguration config = new CorsConfiguration();
+                        config.setAllowedOrigins(Collections.singletonList("*"));
+                        config.setAllowedMethods(Collections.singletonList("*"));
+                        config.setAllowedHeaders(Collections.singletonList("*"));
+                        config.setMaxAge(3600L);
+                        return config;
+                    };
+                    c.configurationSource(source);
+                })
+                .rememberMe(rememberMe -> {
+                    rememberMe.key(SPRING_SECURITY_REMEMBER_ME_COOKIE_KEY)
+                            .tokenValiditySeconds(TWO_WEEKS_S)
+                            .rememberMeParameter("remember") //default is remember-me
+                            .tokenRepository(persistentTokenRepository())
+                    ;
+                })
+                .sessionManagement(sessionManagement -> {
+                    sessionManagement.maximumSessions(1).sessionRegistry(sessionRegistry()).and().sessionFixation().none();
+                });
         return http.build();
     }
 

@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
+import static org.springframework.security.config.Customizer.withDefaults;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
@@ -34,13 +35,11 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http.requiresChannel(rcc -> rcc.anyRequest().requiresInsecure()); // Only HTTP
-        http.httpBasic();
-        http.formLogin();
-
-        http.authorizeRequests().anyRequest().authenticated();
-
-        http.authenticationProvider(daoAuthenticationProvider());
+        http.authorizeRequests(auth -> auth.anyRequest().authenticated())
+                .requiresChannel(rcc -> rcc.anyRequest().requiresInsecure()) // Only HTTP
+                .httpBasic(withDefaults())
+                .formLogin(withDefaults())
+                .authenticationProvider(daoAuthenticationProvider()); //这是增加一个
         return http.build();
     }
 

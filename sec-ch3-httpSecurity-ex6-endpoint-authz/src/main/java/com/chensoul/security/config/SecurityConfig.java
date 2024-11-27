@@ -2,6 +2,7 @@ package com.chensoul.security.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -40,15 +41,15 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http.httpBasic();
-
-        //http.authorizeRequests().anyRequest().hasAnyAuthority("WRITE", "READ");
-        //http.authorizeRequests().anyRequest().hasAuthority("WRITE");
-        http.authorizeRequests().anyRequest().access("hasAuthority('WRITE')");
-
-//        http.authorizeRequests().anyRequest().access("hasAuthority('read') and !hasAuthority('delete')");
-//        http.authorizeRequests().anyRequest().hasRole("ADMIN");
-//        http.authorizeRequests().anyRequest().access("T(java.time.LocalTime).now().isAfter(T(java.time.LocalTime).of(12, 0))");
+        http
+                .httpBasic(Customizer.withDefaults())
+//                .authorizeRequests().anyRequest().hasAnyAuthority("WRITE", "READ")
+                .authorizeRequests().anyRequest().hasAuthority("WRITE")
+//                .authorizeRequests().anyRequest().access("hasAuthority('WRITE')")
+//                .authorizeRequests().anyRequest().access("hasAuthority('read') and !hasAuthority('delete')")
+//                .authorizeRequests().anyRequest().hasRole("ADMIN")
+//                .authorizeRequests().anyRequest().access("T(java.time.LocalTime).now().isAfter(T(java.time.LocalTime).of(12, 0))")
+        ;
 
         return http.build();
     }

@@ -13,12 +13,11 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http.requiresChannel(rcc -> rcc.anyRequest().requiresInsecure()) // Only HTTP
-                .addFilterBefore(
-                        new RequestValidationFilter(), BasicAuthenticationFilter.class)
-                .addFilterAfter(
-                        new AuthenticationLoggingFilter(), BasicAuthenticationFilter.class)
-                .authorizeRequests().anyRequest().permitAll();
+        http.authorizeRequests(auth -> auth.anyRequest().permitAll())
+                .requiresChannel(rcc -> rcc.anyRequest().requiresInsecure()) // Only HTTP
+                .addFilterBefore(new RequestValidationFilter(), BasicAuthenticationFilter.class)
+                .addFilterAfter(new AuthenticationLoggingFilter(), BasicAuthenticationFilter.class)
+        ;
 
         return http.build();
     }

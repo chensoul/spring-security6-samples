@@ -4,7 +4,9 @@ import java.time.LocalTime;
 import java.util.function.Function;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authorization.AuthorizationDecision;
+import org.springframework.security.config.Customizer;
 import org.springframework.security.config.web.server.ServerHttpSecurity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.MapReactiveUserDetailsService;
@@ -38,12 +40,9 @@ public class SecurityConfig {
 
     @Bean
     public SecurityWebFilterChain securityWebFilterChain(ServerHttpSecurity http) {
-        return http.authorizeExchange()
-                .anyExchange().access(this::getAuthorizationDecisionMono)
-                .and()
-                .httpBasic()
-                .and()
-                .build();
+        http.authorizeExchange(auth -> auth.anyExchange().access(this::getAuthorizationDecisionMono))
+                .httpBasic(Customizer.withDefaults());
+        return http.build();
     }
 
     private Mono<AuthorizationDecision> getAuthorizationDecisionMono(

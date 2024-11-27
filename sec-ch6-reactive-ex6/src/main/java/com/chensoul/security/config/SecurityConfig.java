@@ -14,16 +14,9 @@ public class SecurityConfig {
 
     @Bean
     public SecurityWebFilterChain securityWebFilterChain(ServerHttpSecurity http) {
-        return http
-                .authorizeExchange()
-                .anyExchange().authenticated()
-                .and()
-                .oauth2ResourceServer()
-                .jwt(jwtSpec -> {
-                    jwtSpec.jwkSetUri(jwkEndpoint);
-                })
-                .and()
-                .build();
+        http.authorizeExchange(auth -> auth.anyExchange().authenticated())
+                .oauth2ResourceServer(oauth -> oauth.jwt(jwtSpec -> jwtSpec.jwkSetUri(jwkEndpoint)));
 
+        return http.build();
     }
 }
