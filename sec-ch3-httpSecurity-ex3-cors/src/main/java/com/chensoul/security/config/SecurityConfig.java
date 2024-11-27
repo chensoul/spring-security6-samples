@@ -1,5 +1,6 @@
 package com.chensoul.security.config;
 
+import java.util.Collections;
 import java.util.List;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -28,8 +29,10 @@ public class SecurityConfig {
         http.cors(c -> {
             CorsConfigurationSource source = request -> {
                 CorsConfiguration config = new CorsConfiguration();
-                config.setAllowedOrigins(List.of("*"));
-                config.setAllowedMethods(List.of("*"));
+                config.setAllowedOrigins(Collections.singletonList("*"));
+                config.setAllowedMethods(Collections.singletonList("*"));
+                config.setAllowedHeaders(Collections.singletonList("*"));
+                config.setMaxAge(3600L);
                 return config;
             };
             c.configurationSource(source);

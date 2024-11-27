@@ -21,19 +21,19 @@
         <module>sec-ch3-httpSecurity-ex3-cors</module>
         <module>sec-ch3-httpSecurity-ex4-rememberMe</module>
         <module>sec-ch3-httpSecurity-ex5-session</module>
-        <module>sec-ch3-httpSecurity-ex6-endpoint-authorize</module>
-        <module>sec-ch4-authentication-ex1-filter</module>
-        <module>sec-ch4-authentication-ex2-provider</module>
-        <module>sec-ch4-authentication-ex3-i18n</module>
-        <module>sec-ch4-authentication-ex4-dao-provider</module>
-        <module>sec-ch4-authentication-ex5-entrypoint</module>
-        <module>sec-ch4-authentication-ex6-handler</module>
-        <module>sec-ch4-authentication-ex7-rest-jwt</module>
-        <module>sec-ch4-authentication-ex9-async</module>
-        <module>sec-ch5-method-authorize-ex1-prepost-authorize</module>
-        <module>sec-ch5-method-authorize-ex2-evaluator</module>
-        <module>sec-ch5-method-authorize-ex3-secured</module>
-        <module>sec-ch5-method-authorize-ex4-prepost-filter</module>
+        <module>sec-ch3-httpSecurity-ex6-endpoint-authz</module>
+        <module>sec-ch4-authn-ex1-filter</module>
+        <module>sec-ch4-authn-ex2-provider</module>
+        <module>sec-ch4-authn-ex3-i18n</module>
+        <module>sec-ch4-authn-ex4-daoprovider</module>
+        <module>sec-ch4-authn-ex5-exception</module>
+        <module>sec-ch4-authn-ex6-handler</module>
+        <module>sec-ch4-authn-ex7-rest-jwt</module>
+        <module>sec-ch4-authn-ex9-async</module>
+        <module>sec-ch5-method-authz-ex1-prepost-authorize</module>
+        <module>sec-ch5-method-authz-ex2-evaluator</module>
+        <module>sec-ch5-method-authz-ex3-secured</module>
+        <module>sec-ch5-method-authz-ex4-prepost-filter</module>
         <module>sec-ch6-reactive-ex1</module>
         <module>sec-ch6-reactive-ex2</module>
         <module>sec-ch6-reactive-ex3</module>

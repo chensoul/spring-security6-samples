@@ -32,8 +32,13 @@ public class SecurityConfig {
 
         http.addFilterAfter(new CsrfTokenLogger(), CsrfFilter.class);
 
+//        CsrfTokenRequestAttributeHandler csrfTokenRequestAttributeHandler = new CsrfTokenRequestAttributeHandler();
         http.csrf(c -> {
-            c.csrfTokenRepository(customTokenRepository());
+            c.csrfTokenRepository(customTokenRepository())
+//                    .csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
+//                    .csrfTokenRequestHandler(csrfTokenRequestAttributeHandler)
+
+            ;
         });
         return http.build();
     }
