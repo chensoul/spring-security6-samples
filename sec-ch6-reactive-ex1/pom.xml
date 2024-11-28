@@ -12,9 +12,6 @@
     <artifactId>sec-ch6-reactive-ex1</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
-    <properties>
-        <java.version>11</java.version>
-    </properties>
 
     <dependencies>
         <dependency>

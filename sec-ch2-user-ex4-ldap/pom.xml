@@ -12,9 +12,6 @@
     <artifactId>sec-ch2-user-ex4-ldap</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
-    <properties>
-        <java.version>11</java.version>
-    </properties>
 
     <dependencies>
         <dependency>
