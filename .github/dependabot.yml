@@ -11,8 +11,6 @@ updates:
     allow:
       - dependency-name: "org.springframework*"
         dependency-type: "all"
-      - dependency-name: "io.spring*"
-        dependency-type: "all"
     ignore:
       - dependency-name: "*"
         update-types: [ "version-update:semver-major", "version-update:semver-minor" ]
