@@ -43,7 +43,7 @@ jobs:
           git config user.email 'github-actions[bot]@users.noreply.github.com'
       - name: Run Merge Forward
         id: run-auto-merge-forward
-        uses: marcusdacoregio/auto-merge-forward@9eac812bc73673e1a358766ac2ce319bd31ce0f8
+        uses: marcusdacoregio/auto-merge-forward@c9961ac380b07d940d6e742fb9b64691604ecd1d
         with:
           branches: 'main'
           dry-run: false
