@@ -32,7 +32,7 @@ services:
       retries: 10
 
   cas:
-    image: apereo/cas:6.6.6
+    image: apereo/cas:7.1.2
     container_name: cas
     restart: always
     ports:
@@ -49,7 +49,7 @@ services:
       - ./docker/cas/http-1.json:/etc/cas/services/http-1.json
 
   authserver:
-    image: "dexidp/dex:v2.37.0"
+    image: "dexidp/dex:v2.41.1"
     deploy:
       replicas: 1
     configs:
