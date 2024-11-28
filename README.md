@@ -12,7 +12,7 @@
 	<a href="https://github.com/chensoul/spring-security-6-samples/blob/main/LICENSE"><img src="https://img.shields.io/github/license/chensoul/spring-security-6-samples.svg?style=flat-square"></a>
 </p>
 
-基于 Maven 构建的 Spring Security 5 示例。
+基于 Maven 构建的 Spring Security 6 示例。
 
 ## 说明
 
