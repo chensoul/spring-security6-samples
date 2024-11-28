@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <title>Hello Security!</title>
+    <script>
+        const http = new XMLHttpRequest();
+        const url='http://127.0.0.1:8080/hello';
+        http.open("POST", url);
+        http.send();
+
+        http.onreadystatechange = (e) => {
+            document.getElementById("output")
+                .innerHTML =
+                http.responseText;
+        }
+    </script>
+</head>
+<body>
+<h1>Hello Security!</h1>
+<div id="output"></div>
+<div th:fragment="logout" sec:authorize="isAuthenticated()">
+    Logged in user: <span sec:authentication="name"></span> |
+    Roles: <span sec:authentication="principal.authorities"></span>
+    <div>
+        <form action="#" th:action="@{/logout}" method="post">
+            <input type="submit" value="Logout" id="logout"/>
+        </form>
+    </div>
+</div>
+</body>
+</html>

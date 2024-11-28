@@ -10,7 +10,7 @@ public class Main {
 
     public void m() {
         UserDetails u = User.withUsername("bill")
-                .password("pass")
+                .password("password")
                 .authorities("read", "write")
                 .accountExpired(false)
                 .disabled(true)

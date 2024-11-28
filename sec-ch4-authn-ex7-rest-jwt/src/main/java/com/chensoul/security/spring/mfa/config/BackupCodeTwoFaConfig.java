@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonGetter;
 import java.util.Arrays;
 import java.util.Set;
 import java.util.TreeSet;
-import javax.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 

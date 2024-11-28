@@ -31,6 +31,23 @@ services:
       timeout: 5s
       retries: 10
 
+  cas:
+    image: apereo/cas:6.6.6
+    container_name: cas
+    restart: always
+    ports:
+      - "8099:8080"
+    command: >
+      --cas.standalone.configuration-directory=/etc/cas/config
+      --server.ssl.enabled=false
+      --server.port=8080
+      --cas.service-registry.core.init-from-json=true
+      --cas.service-registry.json.location=file:/etc/cas/services
+      --cas.tgc.secure=false
+      --cas.tgc.sameSitePolicy=Lax
+    volumes:
+      - ./docker/cas/http-1.json:/etc/cas/services/http-1.json
+
   authserver:
     image: "dexidp/dex:v2.37.0"
     deploy:

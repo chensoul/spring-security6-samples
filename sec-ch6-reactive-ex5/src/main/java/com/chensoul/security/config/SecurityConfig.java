@@ -16,12 +16,12 @@ public class SecurityConfig {
     @Bean
     public ReactiveUserDetailsService userDetailsService() {
         var u1 = User.withUsername("user")
-                .password("pass")
+                .password("password")
                 .roles("ADMIN")
                 .build();
 
         var u2 = User.withUsername("bill")
-                .password("pass")
+                .password("password")
                 .roles("REGULAR_USER")
                 .build();
 

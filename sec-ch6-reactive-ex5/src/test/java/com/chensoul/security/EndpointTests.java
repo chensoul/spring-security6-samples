@@ -16,8 +16,6 @@ class EndpointTests {
     private WebTestClient client;
 
     @Test
-    @DisplayName("When calling the /hello endpoint without a user, " +
-            "the application should return HTTP 401 Unauthorized.")
     void testCallHelloWithoutUser() {
         client.get()
                 .uri("/hello")
@@ -26,8 +24,6 @@ class EndpointTests {
     }
 
     @Test
-    @DisplayName("When calling the /hello endpoint with a user wihtout ADMIN role, " +
-            "the application should return HTTP 403 Forbidden.")
     @WithMockUser
     void testCallHelloWithUserButNotAValidRole() {
         client.get()
@@ -37,8 +33,6 @@ class EndpointTests {
     }
 
     @Test
-    @DisplayName("When calling the /hello endpoint with a user with ADMIN role, " +
-            "the application should return HTTP 200 OK.")
     @WithMockUser(roles = "ADMIN")
     void testCallHelloWithUserAndValidRole() {
         client.get()

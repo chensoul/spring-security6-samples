@@ -19,14 +19,12 @@ public class MainTests {
     private MockMvc mvc;
 
     @Test
-    @DisplayName("Test calling /hello endpoint without authentication returns unauthorized.")
     public void helloUnauthenticated() throws Exception {
         mvc.perform(get("/hello"))
                 .andExpect(status().isUnauthorized());
     }
 
     @Test
-    @DisplayName("Test calling /hello endpoint authenticated returns ok.")
     @WithMockUser(username = "mary")
     public void helloAuthenticated() throws Exception {
         mvc.perform(get("/hello"))
@@ -35,8 +33,7 @@ public class MainTests {
     }
 
     @Test
-    @DisplayName("Test calling /ciao endpoint authenticated returns ok.")
-    @WithMockUser(username = "mary")
+        @WithMockUser(username = "mary")
     public void ciaoAuthenticated() throws Exception {
         mvc.perform(get("/ciao"))
                 .andExpect(content().string("Ciao, mary!"))
@@ -44,8 +41,7 @@ public class MainTests {
     }
 
     @Test
-    @DisplayName("Test calling /hola endpoint authenticated returns ok.")
-    @WithMockUser(username = "mary")
+        @WithMockUser(username = "mary")
     public void holaAuthenticated() throws Exception {
         mvc.perform(get("/hola"))
                 .andExpect(content().string("Hola, mary!"))

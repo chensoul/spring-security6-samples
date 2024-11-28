@@ -1,8 +1,8 @@
 package com.chensoul.security.spring.mfa.config;
 
 import com.chensoul.security.spring.mfa.provider.TwoFaProviderType;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Pattern;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 

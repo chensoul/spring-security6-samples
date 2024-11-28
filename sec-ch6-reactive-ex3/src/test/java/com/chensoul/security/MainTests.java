@@ -16,8 +16,6 @@ class MainTests {
     private WebTestClient client;
 
     @Test
-    @DisplayName("When calling the /hello endpoint without a user, " +
-            "the application should return HTTP 401 Unauthorized.")
     void testCallHelloWithoutUser() {
         client.get()
                 .uri("/hello")
@@ -26,8 +24,6 @@ class MainTests {
     }
 
     @Test
-    @DisplayName("When calling the /hello endpoint with a user, " +
-            "the application should return HTTP 200 OK.")
     @WithMockUser
     void testCallHelloWithValidUser() {
         client.get()
@@ -37,8 +33,6 @@ class MainTests {
     }
 
     @Test
-    @DisplayName("When calling the /ciao endpoint without a user, " +
-            "the application should return HTTP 200 OK.")
     @WithMockUser
     void testCallCiaoWithoutUser() {
         client.get()

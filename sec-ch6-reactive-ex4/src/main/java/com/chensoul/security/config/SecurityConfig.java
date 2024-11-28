@@ -24,7 +24,7 @@ public class SecurityConfig {
     @Bean
     public ReactiveUserDetailsService userDetailsService() {
         var u = User.withUsername("user")
-                .password("pass")
+                .password("password")
                 .roles("ADMIN")
                 .build();
 

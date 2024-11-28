@@ -1,12 +1,10 @@
 package com.chensoul.security;
 
-import com.chensoul.security.entity.Authority;
-import com.chensoul.security.entity.User;
-import com.chensoul.security.repository.UserRepository;
+import com.chensoul.security.user.Role;
+import com.chensoul.security.user.User;
+import com.chensoul.security.user.UserRepository;
 import java.util.List;
-import java.util.Optional;
 import static org.hamcrest.Matchers.containsString;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import static org.mockito.Mockito.when;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,68 +43,63 @@ public class MainTests {
     private UserRepository userRepository;
 
     @Test
-    @DisplayName("Authenticating with wrong user")
-    public void loggingInWithWrongUser() throws Exception {
+    public void testWithWrongUser() throws Exception {
         mvc.perform(formLogin())
                 .andExpect(unauthenticated());
     }
 
     @Test
-    @DisplayName("Skip authentication and test the controller method")
-    @WithMockUser(username = "mary", password = "pass")
-    public void skipAuthenticationTest() throws Exception {
+    @WithMockUser(username = "mary", password = "password")
+    public void testWithMockUser() throws Exception {
         mvc.perform(get("/hello"))
                 .andExpect(status().isOk())
                 .andExpect(content().string(containsString("Hello, mary!")));
     }
 
     @Test
-    @DisplayName("Test authentication with valid user")
     public void testAuthenticationWithValidUser() throws Exception {
         User mockUser = new User();
         mockUser.setUsername("mary");
-        mockUser.setPassword(passwordEncoder.encode("pass"));
+        mockUser.setPassword(passwordEncoder.encode("password"));
 
-        Authority a = new Authority();
+        Role a = new Role();
         a.setName("read");
         a.setUser(mockUser);
-        mockUser.setAuthorities(List.of(a));
+        mockUser.setRoles(List.of(a));
 
         when(userRepository.findUserByUsername("mary"))
-                .thenReturn(Optional.of(mockUser));
+                .thenReturn(mockUser);
 
         mvc.perform(formLogin()
                         .user("mary")
-                        .password("pass"))
+                        .password("password"))
                 .andExpect(authenticated());
     }
 
     @Test
-    @DisplayName("Test authentication with inexistent user")
     public void testAuthenticationWithInexistentUser() throws Exception {
         when(userRepository.findUserByUsername("mary"))
-                .thenReturn(Optional.empty());
+                .thenReturn(null);
 
         mvc.perform(formLogin()
                         .user("mary")
-                        .password("pass"))
+                        .password("password"))
                 .andExpect(unauthenticated());
     }
 
     @Test
-    @DisplayName("Test authentication with invalid password")
     public void testAuthenticationWithInvalidPassword() throws Exception {
         User mockUser = new User();
         mockUser.setUsername("mary");
-        mockUser.setPassword(passwordEncoder.encode("pass"));
+        mockUser.setPassword(passwordEncoder.encode("password"));
 
-        Authority a = new Authority();
+        Role a = new Role();
         a.setName("read");
         a.setUser(mockUser);
-        mockUser.setAuthorities(List.of(a));
+        mockUser.setRoles(List.of(a));
 
         when(userRepository.findUserByUsername("mary"))
-                .thenReturn(Optional.of(mockUser));
+                .thenReturn(mockUser);
 
         mvc.perform(formLogin()
                         .user("mary")

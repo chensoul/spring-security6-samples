@@ -16,8 +16,6 @@ class MethodTests {
     private HelloController helloController;
 
     @Test
-    @DisplayName("When calling the hello() method a user, " +
-            "the method should throw an AccessDeniedException.")
     void testCallHelloWithoutUser() {
         StepVerifier.create(helloController.hello())
                 .expectError(AccessDeniedException.class)
@@ -25,8 +23,6 @@ class MethodTests {
     }
 
     @Test
-    @DisplayName("When calling the hello() method a user that doesn't have ADMIN role, " +
-            "the method should throw an AccessDeniedException.")
     @WithMockUser
     void testCallHelloWithUserButWrongRole() {
         StepVerifier.create(helloController.hello())
@@ -35,8 +31,6 @@ class MethodTests {
     }
 
     @Test
-    @DisplayName("When calling the hello() method a user having role ADMIN, " +
-            "the method should return the expected result.")
     @WithMockUser(roles = "ADMIN")
     void testCallHelloWithUserAndAdminRole() {
         StepVerifier.create(helloController.hello())

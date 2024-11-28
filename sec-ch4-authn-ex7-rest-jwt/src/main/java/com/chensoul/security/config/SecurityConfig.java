@@ -18,7 +18,6 @@ import com.chensoul.security.spring.provider.rest.RestAuthenticationSuccessHandl
 import com.chensoul.security.spring.provider.rest.RestLoginProcessingFilter;
 import com.chensoul.security.spring.user.CustomUserDetailsService;
 import com.chensoul.security.spring.user.UserRepository;
-import com.chensoul.security.spring.userlocation.DifferentLocationChecker;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.ArrayList;
 import java.util.List;
@@ -53,7 +52,6 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableConfigurationProperties({JwtProperties.class, MfaProperties.class})
 public class SecurityConfig {
     private final UserRepository userRepository;
-    private final DifferentLocationChecker differentLocationChecker;
     private final JwtProperties jwtProperties;
     private final MfaProperties mfaProperties;
     private final RedisTemplate redisTemplate;
@@ -73,10 +71,9 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests(authorize ->
                         authorize
-                                .mvcMatchers(jwtProperties.getPathsToSkip().toArray(new String[0])).permitAll()
+                                .requestMatchers(jwtProperties.getPathsToSkip().toArray(new String[0])).permitAll()
                                 .anyRequest().authenticated()
                 )
-                .requiresChannel(rcc -> rcc.anyRequest().requiresInsecure()) // Only HTTP
                 .formLogin(withDefaults())
                 .httpBasic(withDefaults())
                 .headers(headers -> headers.cacheControl(withDefaults()).frameOptions(withDefaults()).disable())
@@ -159,12 +156,7 @@ public class SecurityConfig {
         DaoAuthenticationProvider daoAuthenticationProvider = new DaoAuthenticationProvider();
         daoAuthenticationProvider.setPasswordEncoder(passwordEncoder());
         daoAuthenticationProvider.setUserDetailsService(userDetailsService());
-        daoAuthenticationProvider.setPostAuthenticationChecks(differentLocationChecker);
         daoAuthenticationProvider.setUserCache(new RedisUserCache(redisTemplate));
-
-        //security 6.4
-//        daoAuthenticationProvider.setCompromisedPasswordChecker(new ResourcePasswordChecker(
-//                new ClassPathResource("10-million-password-list-top-1000000.txt")));
         return daoAuthenticationProvider;
     }
 

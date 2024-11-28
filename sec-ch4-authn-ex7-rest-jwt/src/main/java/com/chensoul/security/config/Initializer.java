@@ -2,8 +2,6 @@ package com.chensoul.security.config;
 
 import com.chensoul.security.spring.user.User;
 import com.chensoul.security.spring.user.UserRepository;
-import com.chensoul.security.spring.userlocation.UserLocation;
-import com.chensoul.security.spring.userlocation.UserLocationRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
@@ -15,7 +13,6 @@ import org.springframework.stereotype.Component;
 @Slf4j
 class Initializer implements CommandLineRunner {
     private final UserRepository userRepository;
-    private final UserLocationRepository userLocationRepository;
     private final PasswordEncoder passwordEncoder;
 
     @Override
@@ -27,7 +24,5 @@ class Initializer implements CommandLineRunner {
 
         userRepository.save(admin);
         userRepository.save(user);
-
-        userLocationRepository.save(new UserLocation("局域网", user));
     }
 }

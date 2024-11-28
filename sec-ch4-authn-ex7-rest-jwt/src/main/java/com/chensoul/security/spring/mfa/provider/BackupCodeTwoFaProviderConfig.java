@@ -15,7 +15,7 @@
  */
 package com.chensoul.security.spring.mfa.provider;
 
-import javax.validation.constraints.Min;
+import jakarta.validation.constraints.Min;
 import lombok.Data;
 
 @Data

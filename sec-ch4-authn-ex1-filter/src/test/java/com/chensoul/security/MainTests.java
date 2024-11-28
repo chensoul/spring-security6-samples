@@ -17,16 +17,14 @@ public class MainTests {
     private MockMvc mvc;
 
     @Test
-    @DisplayName("Endpoint /hello without providing the Request-Id header")
-    public void testHelloNoRequestIdHeader() throws Exception {
+        public void testHelloNoRequestIdHeader() throws Exception {
         mvc.perform(get("/hello"))
                 .andExpect(status().isBadRequest());
     }
 
     @Test
-    @DisplayName("Endpoint /hello providing the Request-Id header")
-    public void testHelloValidRequestIdHeader() throws Exception {
-        mvc.perform(get("/hello").header("Request-Id", "pass"))
+        public void testHelloValidRequestIdHeader() throws Exception {
+        mvc.perform(get("/hello").header("Request-Id", "password"))
                 .andExpect(status().isOk());
     }
 

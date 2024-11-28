@@ -1,7 +1,7 @@
 package com.chensoul.security.config;
 
-import com.chensoul.security.model.User;
-import com.chensoul.security.service.InMemoryUserDetailsService;
+import com.chensoul.security.user.User;
+import com.chensoul.security.user.InMemoryUserDetailsService;
 import java.util.List;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,7 +15,7 @@ public class SecurityConfig {
 
     @Bean
     public UserDetailsService userDetailsService() {
-        UserDetails u = new User("user", "pass", "read");
+        UserDetails u = new User("user", "password", "read");
         List<UserDetails> users = List.of(u);
         return new InMemoryUserDetailsService(users);
     }

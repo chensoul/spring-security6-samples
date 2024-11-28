@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS `user`
     `id`
 ));
 
-CREATE TABLE IF NOT EXISTS `authority`
+CREATE TABLE IF NOT EXISTS `role`
 (
     `id`
     INT

@@ -2,7 +2,7 @@ package com.chensoul.security.spring.provider.rest;
 
 import com.chensoul.security.spring.SecurityUtils;
 import java.io.Serializable;
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.Data;
 
 @Data

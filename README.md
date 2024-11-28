@@ -16,7 +16,7 @@
 
 ## 说明
 
-## 流程图
+### 流程图
 
 Spring Security 流程图
 
@@ -26,22 +26,31 @@ Spring MVC 流程图
 
 ![spring-mvc-flow](./doc/spring-mvc-flow.png)
 
+### FormLogin
+
+![img.png](doc/spring-security-form-login.png)
+
+### Http Basic
+
+![img.png](doc/spring-security-http-basic.png)
+
+
 ### PasswordEncoder 和 UserDetailsService
 
 PasswordEncoder 通常和 UserDetailsService 一起配置，配置 UserDetailsService 时，需要指定 PasswordEncoder。
 
-### 配置 HttpSecurity
+### HttpSecurity
 
 配置 Spring Security 有两种方式：
-- 继承 WebSecurityConfigurerAdapter 类（在 Spring Security 5.7.0-M2
-   之后已删除，参考[文档](https://spring.io/blog/2022/02/21/spring-security-without-the-websecurityconfigureradapter)
-   ）
-- 使用
-   @Bean 注解装配 Bean。不建议混合使用两种方式，推荐使用第二种方式。
+
+- 继承 WebSecurityConfigurerAdapter 类（在 Spring Security
+  5.7.0-M2之后已删除，参考[文档](https://spring.io/blog/2022/02/21/spring-security-without-the-websecurityconfigureradapter)）
+- 使用 @Bean 注解装配 Bean。不建议混合使用两种方式，推荐使用第二种方式。
 
 ### OAuth2
 
 OAuth2 Token 有两种格式：
+
 - Opaque，不透明。不存储数据的令牌。要实现授权，资源服务器通常需要调用授权服务器，提供不透明的令牌，并获取详细信息。
 - No Opaque，非不透明，存储数据的令牌，使后端能够立即实现授权。JWT 是最常用的非不透明令牌实现。
 
@@ -51,11 +60,330 @@ OAuth2 Token 有两种格式：
     - 重放令牌
     - 令牌劫持，参考[文档](https://blog.intothesymmetry.com/2015/06/on-oauth-token-hijacks-for-fun-and.html)
 
-### Spring Security 测试
- 
-1. @WithMockUser
-2. @WithUserDetails
-3. 自定义注解 @WithCustomUser：使用 @WithSecurityContext
+### Testing
+
+#### 使用模拟用户
+
+1. `@WithMockUser`
+
+   ```java
+     //Using @WithMockUser to define a mock user		
+     @Test
+      @WithMockUser
+     public void helloAuthenticated() throws Exception {
+         mvc.perform(get("/hello"))
+                 .andExpect(content().string("Hello, user!"))
+                 .andExpect(status().isOk());
+     }
+   
+     //Using a RequestPostProcessor to define a mock user
+     @Test
+      public void helloAuthenticatedWithUser() throws Exception {
+         mvc.perform(get("/hello")
+                         .with(user("mary")))
+                 .andExpect(content().string("Hello, mary!"))
+                 .andExpect(status().isOk());
+     }
+   ```
+
+2. `@WithUserDetails`。通过 `UserDetailsService` 模拟用户
+
+   ```java
+     @Test
+      @WithUserDetails("user")
+     public void helloAuthenticated() throws Exception {
+         mvc.perform(get("/hello"))
+                 .andExpect(status().isOk());
+     }
+   ```
+
+3. 自定义注解 `@WithCustomUser`
+   ：示例 [seco-ch1-oauth2client-ex1](seco-ch1-oauth2client-ex1/src/test/java/com/chensoul/security/config/WithCustomUser.java)
+
+#### 测试 Method
+
+```java
+
+@SpringBootTest
+class MainTests {
+
+    @Autowired
+    private NameService nameService;
+
+    @Test
+                "it throws AuthenticationException")
+
+    void testNameServiceWithNoUser() {
+        assertThrows(AuthenticationException.class,
+                () -> nameService.getName());
+    }
+
+    @Test
+    @WithMockUser(authorities = "read")
+                "it throws AccessDeniedException")
+
+    void testNameServiceWithUserButWrongAuthority() {
+        assertThrows(AccessDeniedException.class,
+                () -> nameService.getName());
+    }
+
+    @Test
+    @WithMockUser(authorities = "write")
+                "it returns the expected result")
+
+    void testNameServiceWithUserButCorrectAuthority() {
+        var result = nameService.getName();
+
+        assertEquals("Fantastico", result);
+    }
+}
+```
+
+#### 测试 Authentication
+
+1. 测试 `httpBasic()`
+
+示例：sec-ch2-user-ex1-memory
+
+```java
+
+@SpringBootTest
+@AutoConfigureMockMvc
+public class MainTests {
+    @Autowired
+    private MockMvc mvc;
+
+    @Test
+    public void helloAuthenticatingWithValidUser() throws Exception {
+        mvc.perform(get("/hello")
+                        .with(httpBasic("user", "password")))
+                .andExpect(status().isOk());
+    }
+}
+```
+
+2. 测试 `formLogin()`
+
+示例：sec-ch4-authn-ex6-handler
+
+```java
+
+@SpringBootTest
+@AutoConfigureMockMvc
+public class MainTests {
+
+    @Autowired
+    private MockMvc mvc;
+
+    @Test
+    public void loggingInWithWrongUser() throws Exception {
+        mvc.perform(formLogin()
+                        .user("joey").password("password"))
+                .andExpect(header().exists("failed"))
+                .andExpect(unauthenticated());
+    }
+
+    @Test
+    public void loggingInWithWrongAuthority() throws Exception {
+        mvc.perform(formLogin()
+                        .user("mary").password("password")
+                )
+                .andExpect(redirectedUrl("/error"))
+                .andExpect(status().isFound())
+                .andExpect(authenticated());
+    }
+
+    @Test
+    public void loggingInWithCorrectAuthority() throws Exception {
+        mvc.perform(formLogin()
+                        .user("bill").password("password")
+                )
+                .andExpect(redirectedUrl("/home"))
+                .andExpect(status().isFound())
+                .andExpect(authenticated());
+    }
+
+}
+```
+
+3. 使用模拟 JWT 测试资源服务器
+
+```java
+
+@SpringBootTest
+@AutoConfigureMockMvc
+class ApplicationTests {
+    @Autowired
+    private MockMvc mockMvc;
+
+    @Test
+    void demoEndpointSuccessfulAuthenticationTest() throws Exception {
+        mockMvc.perform(
+                        get("/demo").with(jwt()))
+                .andExpect(status().isOk());
+    }
+}
+```
+
+4. 使用模拟 Opaque Token 测试资源服务器
+
+```java
+
+@SpringBootTest
+@AutoConfigureMockMvc
+class ApplicationTests {
+    @Autowired
+    private MockMvc mockMvc;
+
+    @Test
+    void demoEndpointSuccessfulAuthenticationTest() throws Exception {
+        mockMvc.perform(
+                        get("/demo").with(opaqueToken()))
+                .andExpect(status().isOk());
+    }
+}
+```
+
+#### 测试 CSRF
+
+示例：sec-ch3-httpSecurity-ex2-csrf
+
+```java
+
+@SpringBootTest
+@AutoConfigureMockMvc
+public class MainTests {
+
+    @Autowired
+    private MockMvc mvc;
+
+    @Test
+    public void testHelloPOST() throws Exception {
+        mvc.perform(post("/hello"))
+                .andExpect(status().isForbidden());
+    }
+
+    @Test
+    public void testHelloPOSTWithCSRF() throws Exception {
+        mvc.perform(post("/hello")
+                        .with(httpBasic("user", "password")).with(csrf()))
+                .andExpect(status().isOk());
+    }
+}
+```
+
+#### 测试 CORS
+
+示例：sec-ch3-httpSecurity-ex3-cors
+
+```java
+
+@SpringBootTest
+@AutoConfigureMockMvc
+public class MainTests {
+
+    @Autowired
+    private MockMvc mvc;
+
+    @Test
+    public void testCORSForTestEndpoint() throws Exception {
+        mvc.perform(options("/hello")
+                        .header("Access-Control-Request-Method", "POST")
+                        .header("Origin", "http://www.example.com")
+                ).andExpect(header().exists("Access-Control-Allow-Origin"))
+                .andExpect(header().string("Access-Control-Allow-Origin", "*"))
+                .andExpect(header().exists("Access-Control-Allow-Methods"))
+                .andExpect(header().string("Access-Control-Allow-Methods", "POST"))
+                .andExpect(status().isOk());
+    }
+
+}
+```
+
+#### 测试认证服务器
+
+1. 密码模式
+
+示例：seco-ch2-authServer-ex1
+
+```java
+
+@SpringBootTest
+@AutoConfigureMockMvc
+public class MainTests {
+
+    @Autowired
+    private MockMvc mvc;
+
+    @Test
+    public void testAccessTokenIsObtainedUsingValidUserAndClient() throws Exception {
+        mvc.perform(
+                        post("/oauth/token")
+                                .with(httpBasic("client", "secret"))
+                                .queryParam("grant_type", "password")
+                                .queryParam("username", "user")
+                                .queryParam("password", "password")
+                                .queryParam("scope", "read")
+                )
+                .andExpect(jsonPath("$.access_token").exists())
+                .andExpect(status().isOk());
+    }
+}
+```
+
+2. 授权码模式
+
+示例：seco-ch2-authServer-ex2
+
+```java
+
+@SpringBootTest
+@AutoConfigureMockMvc
+public class MainTests {
+
+    @Autowired
+    private MockMvc mvc;
+
+    @Test
+    public void testAuthorizeEndpoint() throws Exception {
+        mvc.perform(get("/oauth/authorize")
+                        .queryParam("response_type", "code")
+                        .queryParam("client_id", "client")
+                        .queryParam("scope", "read")
+                )
+                .andExpect(redirectedUrl("http://localhost/login"))
+                .andExpect(status().isFound());
+    }
+
+}
+```
+
+3. 客户端凭证模式
+
+示例：seco-ch2-authServer-ex3
+
+```java
+
+@SpringBootTest
+@AutoConfigureMockMvc
+public class MainTests {
+
+    @Autowired
+    private MockMvc mvc;
+
+    @Test
+    public void testAccessTokenIsObtainedUsingValidClientCredentials() throws Exception {
+        mvc.perform(
+                        post("/oauth/token")
+                                .with(httpBasic("client", "secret"))
+                                .queryParam("grant_type", "client_credentials")
+                                .queryParam("scope", "info")
+                )
+                .andExpect(jsonPath("$.access_token").exists())
+                .andExpect(status().isOk());
+    }
+}
+```
 
 ## TODO
 
