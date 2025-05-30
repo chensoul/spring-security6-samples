@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.chensoul</groupId>
-    <artifactId>sec-ch2-ex1-form-login</artifactId>
+    <artifactId>ch2-form-login</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
 
