@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.chensoul</groupId>
@@ -8,41 +8,41 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>sec-ch1-hello-ex1</module>
-        <module>sec-ch1-hello-ex2</module>
-        <module>sec-ch2-user-ex1-memory</module>
-        <module>sec-ch2-user-ex2-jdbc</module>
-        <module>sec-ch2-user-ex3-jpa</module>
-        <module>sec-ch2-user-ex4-ldap</module>
-        <module>sec-ch2-ex1-form-basic</module>
-        <module>sec-ch2-ex2-csrf</module>
-        <module>sec-ch2-ex3-cors</module>
-        <module>sec-ch2-ex4-rememberMe</module>
-        <module>sec-ch2-ex5-session</module>
-        <module>sec-ch2-ex6-ott</module>
-        <module>sec-ch2-ex7-handler-event</module>
-        <module>sec-ch2-ex8-exception</module>
-        <module>sec-ch4-authn-ex1-filter</module>
-        <module>sec-ch4-authn-ex2-provider</module>
-        <module>sec-ch4-authn-ex3-manager</module>
-        <module>sec-ch4-authn-ex4-password-checker</module>
-        <module>sec-ch4-authn-ex4-password-checker-handler</module>
-        <module>sec-ch4-authn-ex5-userlocation</module>
-        <module>sec-ch4-authn-ex6-jwt</module>
-        <module>sec-ch4-authn-ex7-rest-jwt</module>
-        <module>sec-ch4-authn-ex8-cas</module>
-        <module>sec-ch4-authn-ex9-async</module>
-        <module>sec-ch5-authz-ex1-endpoint</module>
-        <module>sec-ch5-authz-ex2-prepost-authorize</module>
-        <module>sec-ch5-authz-ex3-evaluator</module>
-        <module>sec-ch5-authz-ex4-secured</module>
-        <module>sec-ch5-authz-ex5-prepost-filter</module>
-        <module>sec-ch6-reactive-ex1</module>
-        <module>sec-ch6-reactive-ex2</module>
-        <module>sec-ch6-reactive-ex3</module>
-        <module>sec-ch6-reactive-ex4</module>
-        <module>sec-ch6-reactive-ex5</module>
-        <module>sec-ch6-reactive-ex6</module>
+        <module>ch1-hello</module>
+        <module>ch1-hello-index</module>
+        <module>ch2-form-login</module>
+        <module>ch2-form-login-csrf</module>
+        <module>ch2-form-login-cors</module>
+        <module>ch2-form-login-rememberme</module>
+        <module>ch2-form-login-session</module>
+        <module>ch2-form-login-ott</module>
+        <module>ch2-form-login-handler</module>
+        <module>ch2-form-login-exception</module>
+        <module>ch3-user-memory</module>
+        <module>ch3-user-jdbc</module>
+        <module>ch3-user-jpa</module>
+        <module>ch3-user-ldap</module>
+        <module>ch4-authn-ex1-filter</module>
+        <module>ch4-authn-ex2-provider</module>
+        <module>ch4-authn-ex3-manager</module>
+        <module>ch4-authn-ex4-password-checker</module>
+        <module>ch4-authn-ex4-password-checker-handler</module>
+        <module>ch4-authn-ex5-userlocation</module>
+        <module>ch4-authn-ex6-jwt</module>
+        <module>ch4-authn-ex7-rest-jwt</module>
+        <module>ch4-authn-ex8-cas</module>
+        <module>ch4-authn-ex9-async</module>
+        <module>ch5-authz-ex1-endpoint</module>
+        <module>ch5-authz-ex2-prepost-authorize</module>
+        <module>ch5-authz-ex3-evaluator</module>
+        <module>ch5-authz-ex4-secured</module>
+        <module>ch5-authz-ex5-prepost-filter</module>
+        <module>ch6-reactive-ex1</module>
+        <module>ch6-reactive-ex2</module>
+        <module>ch6-reactive-ex3</module>
+        <module>ch6-reactive-ex4</module>
+        <module>ch6-reactive-ex5</module>
+        <module>ch6-reactive-ex6</module>
     </modules>
 
 </project>

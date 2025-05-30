@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
+      xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Hello Security!</title>
+</head>
+<body>
+<h1>Hello Security!</h1>
+<div sec:authorize="isAuthenticated()" th:fragment="logout">
+    Logged in user: <span sec:authentication="name"></span> |
+    Roles: <span sec:authentication="principal.authorities"></span>
+    <div>
+        <form action="#" method="post" th:action="@{/logout}">
+            <input id="logout" type="submit" value="Logout"/>
+        </form>
+    </div>
+</div>
+<div th:if="${#ctx.session.compromised_password != null}">
+    <h3>Your password is compromised, please consider resetting it</h3>
+</div>
+</body>
+</html>

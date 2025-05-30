@@ -34,7 +34,6 @@ Spring MVC 流程图
 
 ![img.png](doc/spring-security-http-basic.png)
 
-
 ### PasswordEncoder 和 UserDetailsService
 
 PasswordEncoder 通常和 UserDetailsService 一起配置，配置 UserDetailsService 时，需要指定 PasswordEncoder。
@@ -442,6 +441,8 @@ openssl pkcs12 -in private.p12 -nodes -nocerts -out private.key
 
 ## 参考
 
+一些书籍、视频、代码仓库或者参考文章：
+
 - 《Spring Security in Action, 2nd
   Edition》 [code](https://manning-content.s3.amazonaws.com/download/9/cdd7a3a-1962-44d0-b637-59a805d0e18c/spring_security_in_action_source_code.zip)
 - [spring-security-oauth2-boot 示例](https://github.com/spring-attic/spring-security-oauth2-boot/tree/main/samples)
@@ -463,3 +464,11 @@ openssl pkcs12 -in private.p12 -nodes -nocerts -out private.key
 - [Spring Security 6.0 Tutorials in Hindi](https://github.com/becoderpavy/spring_boot_tutorial.git)
 - https://github.com/docodebyself/JWT-Authentication-and-Authorization-in-Spring-Security---Spring-Boot-REST-API
 - [Exploring Spring Security's Compromised Password Checker](https://dimitri.codes/spring-security-compromisedpasswordchecker/)
+- https://github.com/kennyk65/Microservices-With-Spring-Student-Files
+-
+
+使用 Spring Security 或者 Spring Security OAuth2 的项目：
+
+- [thingsboard](https://github.com/thingsboard/thingsboard)
+- [vaadin](https://github.com/vaadin/flow)
+- [jmix](https://github.com/jmix-framework/jmix)
