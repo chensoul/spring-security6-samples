@@ -15,7 +15,7 @@
     <properties>
         <java.version>11</java.version>
 
-        <geoip2.version>4.2.1</geoip2.version>
+        <geoip2.version>4.4.0</geoip2.version>
     </properties>
 
     <dependencies>
