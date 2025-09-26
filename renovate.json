@@ -7,11 +7,8 @@
   "platformAutomerge": true,
   "automerge": true,
   "automergeType": "pr",
-  "ignoreTests": true,
-  "assignees": [
-    "chensoul"
-  ],
-  "commitMessageSuffix": "[skip ci]",
+  "ignoreTests": false,
+  "assignees": ["chensoul"],
   "automergeStrategy": "squash",
   "packageRules": [
     {
@@ -23,7 +20,7 @@
       ],
       "automerge": true,
       "automergeType": "pr",
-      "ignoreTests": true
+      "requiredStatusChecks": null
     },
     {
       "matchUpdateTypes": [
